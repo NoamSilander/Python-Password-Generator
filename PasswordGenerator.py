@@ -17,7 +17,17 @@ def psw_init():
         elif user_symbol == 'n':
             symbols = False
             break
-    strings = string.ascii_letters + string.digits + string.punctuation if symbols else string.ascii_letters + string.digits
+    while True:
+        user_symbol = input('Include numbers (y/n): ').lower()
+        if user_symbol == 'y':
+            numbers = True
+            break
+        elif user_symbol == 'n':
+            numbers = False
+            break
+    strings = string.ascii_letters + string.punctuation if symbols else string.ascii_letters
+    if numbers:
+        strings += string.digits
     return user_length, strings
 
 def psw_generator():
