@@ -25,17 +25,24 @@ def psw_init():
         elif user_symbol == 'n':
             numbers = False
             break
+    while True:
+        try:
+            user_amount = int(input('How many passwords do you want?: '))
+            break
+        except ValueError:
+            print('Must be a whole number')
     strings = string.ascii_letters + string.punctuation if symbols else string.ascii_letters
     if numbers:
         strings += string.digits
-    return user_length, strings
+    return user_length, strings, user_amount
 
 def psw_generator():
-    length, strings = psw_init()
-    password = ''
-    for i in range(length):
-        password += secrets.choice(strings)
-    print(password)
+    length, strings, amount = psw_init()
+    for j in range(amount):
+        password = ''
+        for i in range(length):
+            password += secrets.choice(strings)
+        print(f'Your {j + 1}. password is: {password}')
 
     
     
