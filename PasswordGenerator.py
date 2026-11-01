@@ -17,10 +17,17 @@ def psw_init():
         elif user_symbol == 'n':
             symbols = False
             break
-    return user_length, symbols
+    strings = string.ascii_letters + string.digits + string.punctuation if symbols else string.ascii_letters + string.digits
+    print(strings)
+    return user_length, strings
 
-def psw_generator(psw):
-    length, use_symbols = psw_init()
+def psw_generator():
+    length, strings = psw_init()
+    password = ''
+    for i in range(length):
+        pass
+
+    
     
 
 
