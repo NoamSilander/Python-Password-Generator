@@ -1,7 +1,5 @@
 import string
 import secrets
-import random
-
 def psw_init():
     while True:
         try:
