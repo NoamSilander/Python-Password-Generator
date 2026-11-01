@@ -4,7 +4,10 @@ def psw_init():
     while True:
         try:
             user_length = int(input('How many characters should the password be?: '))
-            break
+            if user_length < 1:
+                print('Must be atleast 1 character long')
+            else:
+                break
         except ValueError:
             print('Must be a whole number')
     while True:
@@ -26,7 +29,10 @@ def psw_init():
     while True:
         try:
             user_amount = int(input('How many passwords do you want?: '))
-            break
+            if user_length < 1:
+                print('Must be atleast 1 character long')
+            else:
+                break
         except ValueError:
             print('Must be a whole number')
     strings = string.ascii_letters + string.punctuation if symbols else string.ascii_letters
