@@ -18,17 +18,17 @@ def psw_init():
             symbols = False
             break
     strings = string.ascii_letters + string.digits + string.punctuation if symbols else string.ascii_letters + string.digits
-    print(strings)
     return user_length, strings
 
 def psw_generator():
     length, strings = psw_init()
     password = ''
     for i in range(length):
-        pass
+        password += secrets.choice(strings)
+    print(password)
 
     
     
 
 
-psw_generator('asd')
+psw_generator()
