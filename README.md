@@ -1,7 +1,7 @@
 # Password Generator
 A password generator written in Python that (supposedly) gives you strong passwords.
 
-Works by utlizing the `string` and `secrets` modules.
+Works by utilizing the `string` and `secrets` modules.
 
 The script asks a couple of things:
 1. How many characters long you'd like your password to be
@@ -10,7 +10,7 @@ The script asks a couple of things:
 4. How many passwords you'd like to be generated
 
 # How to Run
-1.Run `PasswordGenerator.py`
+1. Run `PasswordGenerator.py`
 
 # Example
 ```
